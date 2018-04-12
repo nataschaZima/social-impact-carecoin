@@ -136,13 +136,21 @@ export default {
 </script>
 
 <style>
+
   h3{
     font-weight: bolder;
+    font-size: 30px;
   }
+
+  p{
+    font-size: 22px;
+  }
+
 
   .checkboxes{
     display: inline-flex;
     flex-direction: column;
+    font-size: 20px;
   }
 
   .children{
@@ -182,5 +190,6 @@ export default {
 
   .docs-upload{
     font-weight: bold;
+    font-size: 20px;
   }
 </style>
