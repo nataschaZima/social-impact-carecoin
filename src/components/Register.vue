@@ -216,6 +216,7 @@ export default {
   }
 
   .docs-upload{
+    margin-top: 100px;
     font-weight: bold;
     font-size: 20px;
   }
