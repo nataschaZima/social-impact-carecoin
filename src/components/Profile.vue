@@ -5,8 +5,8 @@
 </div>
 <div class="container2">
 <div class="central_container">
-<a class="button reward" href="#">REWARD SOMEONE</a>
-<a class="button buy" href="#">BUY CARECOINS</a>
+<a class="button1 reward" href="#">REWARD SOMEONE</a>
+<a class="button1 buy" href="#">BUY CARECOINS</a>
 </div>
 </div>
 <div class="container3">
@@ -74,10 +74,11 @@ export default {
     -webkit-box-sizing: border-box;
 }
 
-.button {
+.button1 {
   display: inline-block;
   float: left;
   padding-top: 20px;
+  margin-right: 20px;
   width: 400px;
   color: #4C4C4C;
   height: 65px;

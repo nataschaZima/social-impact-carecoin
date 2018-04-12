@@ -1,5 +1,6 @@
 <template id="registeration">
 <section>
+  <h2>Supporting documents</h2>
   <b-field>
     <b-upload v-model="dropFiles"
         multiple
