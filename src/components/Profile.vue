@@ -1,14 +1,16 @@
 <template>
 <section>
 <div class="container1">
-<img class="photo" src="../assets/top_image_profile.jpg"></img>
+<img class="photo" src="../assets/ProfilePage_Top.jpg"></img>
 </div>
 <div class="container2">
-<a class="button_buy" href="#"> Reward Someone </a>
-<a class="button_buy" href="#"> Buy Points </a>
+<div class="central_container">
+<a class="button reward" href="#">REWARD SOMEONE</a>
+<a class="button buy" href="#">BUY CARECOINS</a>
+</div>
 </div>
 <div class="container3">
-<img class="photo" src="http://i.dailymail.co.uk/i/pix/2015/09/24/19/0DC0A5F000000578-0-Experts_believe_they_ve_found_the_tomb_of_Leonardo_s_Mona_Lisa_m-a-52_1443119320017.jpg"></img>
+<img class="photo" src="../assets/Profile_Section_end.jpg"></img>
 </div>
 </section>
 </template>
@@ -21,22 +23,30 @@ export default {
 
 <style>
 
+.central_container {
+  display: block;
+  width: 840px;
+  position: relative;
+  margin: 0 auto;
+
+}
+
 .container1 {
   display: block;
   position: relative;
   width: 100%;
-  margin-right: 5%;
-  margin-left: 5%;
-  height: 480px;
+  height: 1480px;
 }
 
 .container3 {
   display: block;
   position: relative;
   width: 100%;
-  margin-right: 5%;
-  margin-left: 5%;
   height: 300px;
+}
+
+.photo {
+  object-fit: contain;
 }
 
 .container2 {
@@ -46,7 +56,7 @@ export default {
   margin-right: 5%;
   margin-left: 5%;
   margin-top: 20px;
-  height: 100px;
+  height: 150px;
   background-color: white;
   padding: 20px;
 }
@@ -64,15 +74,31 @@ export default {
     -webkit-box-sizing: border-box;
 }
 
-.button_buy {
+.button {
   display: inline-block;
-  background-color: #FFC80A;
-  margin-left: 20px;
+  float: left;
   padding-top: 20px;
-  padding-bottom: 20px;
-  width: 200px;
-  color: white;
-  border-radius: 5px;
+  width: 400px;
+  color: #4C4C4C;
+  height: 65px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-family: "PT Sans";
+  font-size: 20px;
+  border: 0px;
+}
+
+.button:nth-of-type(1) {
+margin-right: 40px;
+
+}
+
+.buy {
+  background-color: #FFC80A;
+}
+
+.reward {
+  background-color: #51B9BC;
 }
 
 .score {
@@ -80,9 +106,7 @@ export default {
 
 }
 
-.photo {
-  object-fit: contain;
-}
+
 
 .name {
   margin-left: 20px;
