@@ -8,7 +8,7 @@
     <b-checkbox>Household</b-checkbox> <br>
   </div>
   <hr>
-  <h3>2. Who are you household dependants?</h3><br>
+  <h3>2. Who are your household dependants?</h3><br>
     <div class="children">
       <p>Children</p> <b-select placeholder="Select a number" rounded>
           <option value="number"> 1 </option>
@@ -71,8 +71,6 @@
       <span>0% </span> <vue-slider class="vue-slider-component vue-slider-horizontal" style="width: 250px;display:  block;margin:  0 auto;/* text-align:  center; */" v-model="value"></vue-slider><span>100%</span>
     </div>
 
-
-
 </section>
 </template>
 
@@ -123,6 +121,7 @@ export default {
 
   .slider{
     display: inline-flex;
+    padding-top: 10px;
   }
 
 
