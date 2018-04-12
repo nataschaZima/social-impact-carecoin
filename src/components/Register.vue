@@ -99,7 +99,6 @@
     <b-input type="password" maxlength="30"></b-input>
 </b-field>
   </b-field>
-  <hr>
 
   <h1 class="docs-upload"> Please upload supporting documents</h1><br>
   <b-field>
