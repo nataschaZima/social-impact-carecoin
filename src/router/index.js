@@ -3,6 +3,8 @@ import Router from 'vue-router'
 import Register from '@/components/register'
 import Profile from '@/components/Profile'
 import Landing from '@/components/Landing'
+import Calculate from '@/components/Calculate'
+import Result from '@/components/Result'
 
 Vue.use(Router)
 
@@ -22,6 +24,16 @@ export default new Router({
       path: '/',
       name: 'Landing',
       component: Landing
+    },
+    {
+      path: '/calculation',
+      name: 'Calculate',
+      component: Calculate
+    },
+    {
+      path: '/result',
+      name: 'Result',
+      component: Result
     }
   ]
 })
