@@ -1,33 +1,5 @@
 <template id="registeration">
 <section>
-  <h2>Supporting documents</h2>
-  <b-field>
-    <b-upload v-model="dropFiles"
-        multiple
-        drag-drop>
-        <section class="section">
-            <div class="content has-text-centered">
-              <img class="arrow" src="@/assets/arrow-up.png">
-                <p>
-                    <b-icon size="is-large"> </b-icon>
-                </p>
-                <p>Drop your files here or click to upload</p>
-            </div>
-        </section>
-    </b-upload>
-</b-field>
-
-<div class="tags">
-    <span v-for="(file, index) in dropFiles"
-        :key="index"
-        class="tag is-primary" style="margin:  0 auto;">
-        {{file.name}}
-        <button class="delete is-small"
-            type="button"
-            @click="deleteDropFile(index)">
-        </button>
-    </span>
-</div>
   <h3> 1. How is your working situation?</h3> <br>
   <div class="checkboxes">
     <b-checkbox>Full time</b-checkbox> <br>
@@ -103,6 +75,35 @@
       <span>0% </span> <vue-slider class="vue-slider-component vue-slider-horizontal" style="width: 250px;display:  block;margin:  0 auto;/* text-align:  center; */" v-model="value"></vue-slider><span>100%</span>
     </div><br>
 
+
+    <h1 class="docs-upload"> Please upload supporting documents</h1><br>
+    <b-field>
+      <b-upload v-model="dropFiles"
+          multiple
+          drag-drop>
+          <section class="section">
+              <div class="content has-text-centered">
+                <img class="arrow" src="@/assets/arrow-up.png">
+                  <p>
+                      <b-icon size="is-large"> </b-icon>
+                  <p>Drop your files here or click to upload</p>
+              </div>
+          </section>
+      </b-upload>
+  </b-field>
+
+  <div class="tags">
+      <span v-for="(file, index) in dropFiles"
+          :key="index"
+          class="tag is-primary" style="margin:  0 auto;">
+          {{file.name}}
+          <button class="delete is-small"
+              type="button"
+              @click="deleteDropFile(index)">
+          </button>
+      </span>
+  </div>
+
     <router-link to="/Calculation">
 
       <input class="button" type="submit" value="Submit">
@@ -167,7 +168,7 @@ export default {
   .slider{
     display: inline-flex;
     padding-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
   }
 
   .button{
@@ -177,5 +178,9 @@ export default {
   .arrow{
     width: 70px;
     margin: 0 auto;
+  }
+
+  .docs-upload{
+    font-weight: bold;
   }
 </style>
