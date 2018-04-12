@@ -11,6 +11,7 @@
   <h3>2. Who are your household dependants?</h3><br>
     <div class="children">
       <p>Children</p> <b-select placeholder="Select a number" rounded>
+          <option value="number"> None </option>
           <option value="number"> 1 </option>
           <option value="number"> 2 </option>
           <option value="number"> 3 </option>
@@ -25,6 +26,7 @@
     </div> <br>
     <div class="partner">
       <p>Partner</p> <b-select placeholder="Select a number" rounded>
+          <option value="number"> None </option>
           <option value="number"> 1 </option>
           <option value="number"> 2 </option>
           <option value="number"> 3 </option>
@@ -39,6 +41,7 @@
     </div><br>
     <div class="eldery">
       <p>Eldery</p> <b-select placeholder="Select a number" rounded>
+          <option value="number"> None </option>
           <option value="number"> 1 </option>
           <option value="number"> 2 </option>
           <option value="number"> 3 </option>
@@ -53,6 +56,7 @@
     </div><br>
     <div class="other">
       <p>Other dependence</p> <b-select placeholder="Select a number" rounded>
+          <option value="number"> None </option>
           <option value="number"> 1 </option>
           <option value="number"> 2 </option>
           <option value="number"> 3 </option>
@@ -69,7 +73,10 @@
     <h3>3. What’s your contribution at home?</h3><br>
     <div class="slider">
       <span>0% </span> <vue-slider class="vue-slider-component vue-slider-horizontal" style="width: 250px;display:  block;margin:  0 auto;/* text-align:  center; */" v-model="value"></vue-slider><span>100%</span>
-    </div>
+    </div><br>
+
+    <input class="button" type="submit" value="Submit">
+
 
 </section>
 </template>
@@ -122,7 +129,10 @@ export default {
   .slider{
     display: inline-flex;
     padding-top: 10px;
+    margin-bottom: 20px;
   }
 
-
+  .button{
+    margin-bottom: 40px;
+  }
 </style>
