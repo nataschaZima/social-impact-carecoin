@@ -4,7 +4,7 @@
 <img class="background" src="../assets/HomePage.jpg"></img>
 </div>
 <div class='link_container'>
-<router-link tag="a" to="/Register" class='button'>
+<router-link tag="a" to="/Register" class='button-register'>
 </router-link>
 </div>
 </div>
@@ -33,7 +33,7 @@ position: relative;
   width: 100%;
 }
 
-.button {
+.button-register {
 display: inline-block;
 height: 115px;
 width: 400px;
