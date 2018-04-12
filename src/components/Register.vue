@@ -1,5 +1,32 @@
 <template id="registeration">
 <section>
+  <b-field>
+    <b-upload v-model="dropFiles"
+        multiple
+        drag-drop>
+        <section class="section">
+            <div class="content has-text-centered">
+              <img class="arrow" src="@/assets/arrow-up.png">
+                <p>
+                    <b-icon size="is-large"> </b-icon>
+                </p>
+                <p>Drop your files here or click to upload</p>
+            </div>
+        </section>
+    </b-upload>
+</b-field>
+
+<div class="tags">
+    <span v-for="(file, index) in dropFiles"
+        :key="index"
+        class="tag is-primary" style="margin:  0 auto;">
+        {{file.name}}
+        <button class="delete is-small"
+            type="button"
+            @click="deleteDropFile(index)">
+        </button>
+    </span>
+</div>
   <h3> 1. How is your working situation?</h3> <br>
   <div class="checkboxes">
     <b-checkbox>Full time</b-checkbox> <br>
@@ -75,7 +102,11 @@
       <span>0% </span> <vue-slider class="vue-slider-component vue-slider-horizontal" style="width: 250px;display:  block;margin:  0 auto;/* text-align:  center; */" v-model="value"></vue-slider><span>100%</span>
     </div><br>
 
-    <input class="button" type="submit" value="Submit">
+    <router-link to="/Calculation">
+
+      <input class="button" type="submit" value="Submit">
+
+    </router-link>
 
 
 </section>
@@ -90,7 +121,13 @@ export default {
   },
   data () {
     return {
-      value: 0
+      value: 0,
+      dropFiles: []
+    }
+  },
+  methods: {
+    deleteDropFile (index) {
+      this.dropFiles.splice(index, 1)
     }
   }
 }
@@ -134,5 +171,10 @@ export default {
 
   .button{
     margin-bottom: 40px;
+  }
+
+  .arrow{
+    width: 70px;
+    margin: 0 auto;
   }
 </style>
