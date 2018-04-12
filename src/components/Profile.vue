@@ -47,6 +47,7 @@ export default {
 
 .photo {
   object-fit: contain;
+  margin-top: 40px;
 }
 
 .container2 {

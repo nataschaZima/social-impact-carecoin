@@ -1,6 +1,6 @@
 <template id="registeration">
 <section>
-  <h3> 1. How is your working situation?</h3> <br>
+  <h3 class="st-question"> 1. How is your working situation?</h3> <br>
   <div class="checkboxes">
     <b-checkbox>Full time</b-checkbox> <br>
     <b-checkbox>Part time</b-checkbox> <br>
@@ -74,23 +74,50 @@
     <div class="slider">
       <span>0% </span> <vue-slider class="vue-slider-component vue-slider-horizontal" style="width: 250px;display:  block;margin:  0 auto;/* text-align:  center; */" v-model="value"></vue-slider><span>100%</span>
     </div><br>
+    <hr>
 
+  <div class="inputs-user">
+    <b-field style="
+    margin:  0 auto;
+    display: -webkit-inline-box;" grouped>
 
-    <h1 class="docs-upload"> Please upload supporting documents</h1><br>
-    <b-field>
-      <b-upload v-model="dropFiles"
-          multiple
-          drag-drop>
-          <section class="section">
-              <div class="content has-text-centered">
-                <img class="arrow" src="@/assets/arrow-up.png">
-                  <p>
-                      <b-icon size="is-large"> </b-icon>
-                  <p>Drop your files here or click to upload</p>
-              </div>
-          </section>
-      </b-upload>
+    <b-field label="Name">
+        <b-field>
+            <b-select style="margin-left: 40px; margin-right: -30px;" placeholder="Title">
+                <option>Mr.</option>
+                <option>Ms.</option>
+            </b-select>
+            <b-input style="width: 290px; padding-left: 30px;" placeholder="Name" expanded></b-input>
+        </b-field>
+    </b-field>
+
+    <b-field label="Email">
+        <b-input style="width: 290px" placeholder="some@email.com"></b-input>
+    </b-field>
+
+    <b-field label="Password" style="">
+    <b-input type="password" maxlength="30"></b-input>
+</b-field>
   </b-field>
+  <hr>
+
+  <h1 class="docs-upload"> Please upload supporting documents</h1><br>
+  <b-field>
+  <b-upload v-model="dropFiles"
+      multiple
+      drag-drop>
+      <section class="section">
+          <div class="content has-text-centered">
+            <img class="arrow" src="@/assets/arrow-up.png">
+              <p>
+                  <b-icon size="is-large"> </b-icon>
+              <p>Drop your files here or click to upload</p>
+          </div>
+      </section>
+  </b-upload>
+  </b-field>
+  </div>
+
 
   <div class="tags">
       <span v-for="(file, index) in dropFiles"
@@ -109,7 +136,6 @@
       <input class="button" type="submit" value="Submit">
 
     </router-link>
-
 
 </section>
 </template>
@@ -181,6 +207,8 @@ export default {
 
   .button{
     margin-bottom: 40px;
+    font-size: 18px;
+    font-weight: bold;
   }
 
   .arrow{
@@ -191,5 +219,15 @@ export default {
   .docs-upload{
     font-weight: bold;
     font-size: 20px;
+  }
+
+  .inputs-user{
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .st-question{
+    margin-top: 140px;
   }
 </style>
